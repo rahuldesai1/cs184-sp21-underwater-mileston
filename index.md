@@ -1,37 +1,39 @@
 ## Welcome to GitHub Pages
+## CS 184 Milestone Deliverable 
+Project: Rendering Underwater Scenes
 
-You can use the [editor on GitHub](https://github.com/rahuldesai1/cs184-sp21-underwater-mileston/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### What We Have Accomplished
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+In the past two weeks we worked on two main tasks: using blender to generate a variety of scenes containing water and implementing an algorithm for rendering caustics. 
 
-### Markdown
+After reading and watching videos on ways to represent water, we found the most straightforward way was to build on the 3-2 dae files, treating water as a glass material with the appropriate IOR. We imported files into blender to maintain the scene structure, added stretched cubes to represent the water, then edited the exported dae files to give the objects the correct material. While we were able to render our results, they were not what we expected, and most of our time was spent playing with the geometries and dae files to get a proper looking result.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+For rendering caustics, we spent the first week reading papers and learning about 3 potential implementations for this. We finally settled on implementing photon mapping because it seemed to provide the best and most efficient results. After putting together a detailed design doc, we were able to implement both phases of the photon mapping algorithm for both the global and caustic photon map. We are working on debugging our implementation because we are currently only able to render a black screen. 
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+### Preliminary Results
 
-- Bulleted
-- List
+The results were not what we expected, and we were running into two main issues. The first was that the glass material applied to the cube seemed to incorrectly refract the light. This problem was seemingly fixed by greatly increasing the number of vertices in the cube, and learning that in blender, cubes by default don’t have “sharp vertices.” The second main issue was as we increased the volume of our glass cubes, the result would get noisier and become dark. This issue was somewhat alleviated by the previous two edits, however still persists in our larger renders. One alteration that did help with noise was to extend the edges of the water slightly past the walls. This helped prevent clipping and bounces between the water edge and wall edge, creating a darker image.
 
-1. Numbered
-2. List
+As mentioned, above we do not yet have any successfully rendered scenes because we have run into some trouble while debugging the photon mapping implementation. 
 
-**Bold** and _Italic_ and `Code` text
+### Reflect on Progress
 
-[Link](url) and ![Image](src)
-```
+Creating the dae files definitely took more work than expected. We were expecting to be able to just plot the glass material on a cube and call it a day, but we wound up creating many different files in order to figure out why we were getting these weird effects. Although we currently have files that look decent enough to use in the final product, we are planning to spend the next few days playing around with various sample sizes to see if we can combat the noise and make it a bit more clear.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Although we would have liked to have presented some results with realistic caustics by the milestone, we underestimated the difficulty of completing such an open-ended project. Fortunately, after utilizing office hours and spending quite a bit of time doing research, we have a more clear direction going forward and are confident that we can have results by the final presentation. We are only about a day or two behind schedule which may prevent us from achieving our stretch goals; however, we are hoping to finish the caustics and move on to implementing the shafts of light (god rays) by the end of this week.
 
-### Jekyll Themes
+### Updated Work Plan
+ 
+#### Week 3: (Finish Coding)
+- Finalize scenes to use in final renders
+- Finish debugging the photon map implementation 
+- Design doc for implementing underwater shafts of light 
+ 
+#### Week 4: (Write up and Polish)
+- Debug shafts of light implementation 
+- Write up and Final Deliverable 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/rahuldesai1/cs184-sp21-underwater-mileston/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Links
+Milestone Slides: https://docs.google.com/presentation/d/1JgAd3lilTmoiufPZnNeRONZorxrhZchyqbbxGdDlDOc/edit?usp=sharing
+Milestone Video: 
