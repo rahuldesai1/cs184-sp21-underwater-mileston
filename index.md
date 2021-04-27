@@ -1,5 +1,4 @@
 ## CS 184 Milestone Deliverable 
-Project: Rendering Underwater Scenes
 
 ### What We Have Accomplished
 
@@ -18,7 +17,7 @@ As mentioned, above we do not yet have any successfully rendered scenes because 
 
 ### Reflect on Progress
 
-Creating the dae files definitely took more work than expected. We were expecting to be able to just plot the glass material on a cube and call it a day, but we wound up creating many different files in order to figure out why we were getting these weird effects. Although we currently have files that look decent enough to use in the final product, we are planning to spend the next few days playing around with various sample sizes to see if we can combat the noise and make it a bit more clear.
+Creating the dae files definitely took more work than expected. Although we currently have files that look decent enough to use in the final product, we are planning to spend the next few days playing around with various sample sizes to see if we can combat the noise and make it a bit more clear.
 
 Although we would have liked to have presented some results with realistic caustics by the milestone, we underestimated the difficulty of completing such an open-ended project. Fortunately, after utilizing office hours and spending quite a bit of time doing research, we have a more clear direction going forward and are confident that we can have results by the final presentation. We are only about a day or two behind schedule which may prevent us from achieving our stretch goals; however, we are hoping to finish the caustics and move on to implementing the shafts of light (god rays) by the end of this week.
 
