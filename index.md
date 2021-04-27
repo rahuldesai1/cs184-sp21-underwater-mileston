@@ -1,4 +1,3 @@
-## Welcome to GitHub Pages
 ## CS 184 Milestone Deliverable 
 Project: Rendering Underwater Scenes
 
@@ -35,5 +34,6 @@ Although we would have liked to have presented some results with realistic caust
 - Write up and Final Deliverable 
 
 ### Links
-Milestone Slides: https://docs.google.com/presentation/d/1JgAd3lilTmoiufPZnNeRONZorxrhZchyqbbxGdDlDOc/edit?usp=sharing
-Milestone Video: 
+[Milestone Slides](https://docs.google.com/presentation/d/1JgAd3lilTmoiufPZnNeRONZorxrhZchyqbbxGdDlDOc/edit?usp=sharing)
+
+[Milestone Video (Not linked yet)](www.google.com) 
